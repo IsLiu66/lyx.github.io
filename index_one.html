@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>个人网页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* 全局样式 */
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(236, 217, 152);
+        }
+        /* 菜单栏样式 */
+        
+        .menu {
+            width: 100%;
+            height: 40px;
+            background-color: rgb(181, 134, 84);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+        
+        .menu ul {
+            list-style: none;
+            margin: 12px;
+            padding: 0;
+            float: left;
+        }
+        
+        .menu li {
+            float: left;
+            position: relative;
+        }
+        
+        .menu a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            line-height: 17px;
+            padding: 0 20px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.5vw;
+            text-shadow: 2px 2px 4px rgb(235, 229, 209);
+        }
+        
+        .menu ul ul {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 180px;
+            background-color: rgb(181, 183, 135);
+        }
+        
+        .menu ul li:hover>ul {
+            display: inherit;
+        }
+        
+        .menu ul ul li {
+            width: 100%;
+            float: none;
+            position: relative;
+        }
+        
+        .menu ul ul ul li {
+            position: relative;
+            top: -60px;
+            left: 180px;
+        }
+        /* 个人信息样式 */
+        
+        .info {
+            max-width: 800px;
+            margin: 147px auto 50px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(98, 90, 5);
+        }
+        
+        h1 {
+            background-color: rgb(181, 134, 84);
+            text-align: center;
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-shadow: 2px 2px 4px rgb(98, 90, 5);
+        }
+        
+        .profile-image {
+            display: block;
+            margin-top: -14px;
+            width: 110px;
+            border-radius: 15px;
+            margin-left: 335px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: normal;
+        }
+        /* 教育经历样式 */
+        
+        .education {
+            max-width: 800px;
+            margin: 50px auto 50px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(98, 90, 5);
+        }
+        
+        .education h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        /* 技能样式 */
+        
+        .skill {
+            max-width: 800px;
+            margin: 50px auto 80px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(98, 90, 5);
+        }
+        
+        .skill h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .skill ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .skill li {
+            width: 180px;
+            background-color: #f2f2f2;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+
+        <div class="menu">
+            <ul>
+                <li><a href="#info">个人信息</a></li>
+                <li><a href="#edu">教育经历</a></li>
+                <li><a href="#skill">技能</a></li>
+            </ul>
+        </div>
+
+        <div id="info" class="info">
+            <h1>个人信息</h1>
+            <img class="profile-image" src="个人图片.png" alt="个人照片">
+            <table>
+                <!-- <tr>
+                    <img src="个人图片.png" style="margin-left: 302px;padding-top: 0px;padding-bottom: 0px;box-shadow:0px 0px 10px #333;width: 179px;height: 193px;">
+                </tr> -->
+                <tr>
+                    <th>姓名</th>
+                    <td>刘永希</td>
+                </tr>
+                <tr>
+                    <th>性别</th>
+                    <td>女</td>
+                </tr>
+                <tr>
+                    <th>生日</th>
+                    <td>2003年1月21日</td>
+                </tr>
+                <tr>
+                    <th>学历</th>
+                    <td>本科</td>
+                </tr>
+                <tr>
+                    <th>毕业院校</th>
+                    <td>福建理工大学</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="edu" class="education">
+            <h1>教育经历</h1>
+            <div id="highschool">
+                <h2>高中</h2>
+                <ul>
+                    <li>德兴铜矿中学</li>
+                    <li>2018年9月-2021年6月</li>
+                </ul>
+            </div>
+            <div id="university">
+                <h2>大学</h2>
+                <ul>
+                    <li><a href="https://www.fjut.edu.cn/main.htm">福建理工大学</a></li>
+                    <li>2021年9月-2025年6月</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="skill" class="skill">
+            <h1>技能</h1>
+            <ul>
+                <li>CSS</li>
+                <li>HTML</li>
+                <li>Javascript</li>
+                <li>Photoshop</li>
+            </ul>
+        </div>
+</body>
+
+</html>
